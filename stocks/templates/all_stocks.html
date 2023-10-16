@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stocks</title>
+</head>
+<!-- Django Template Tags -->
+<body>
+    <h1>Today's Recommended Stocks</h1>
+
+    <ul>
+      {% for x in stocks %}
+        <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }} {{ x.price }}</li>
+      {% endfor %}
+    </ul>
+</body>
+</html>
